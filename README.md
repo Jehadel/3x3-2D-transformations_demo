@@ -175,3 +175,5 @@ make js
 Write the script !
 
 ## Issues
+
+To simplify, lot of transformations parameters are hard coded, not very elegant.
