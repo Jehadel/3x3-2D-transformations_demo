@@ -126,17 +126,13 @@ How do we combine those 3 transformations ? By successively applying the corresp
 Perform the rotation and then translate back the figure to C. It means that C<sub>x</sub> and C<sub>y</sub> are not only the coordinates of C, but also the parameters of the translation.
 
 $$ \begin{bmatrix} x & y & 1 \end{bmatrix} . T1 . R . T2 = \\
-
     \begin{bmatrix} x & y & 1 \end{bmatrix} . 
-    
     \begin{bmatrix} 1 & 0 & 0 \\\ 
                 0 & 1 & 0 \\\ 
                 -C_x & -C_y & 1 \end{bmatrix} .
-    
     \begin{bmatrix} \cos 20\degree & \sin 20\degree & 0 \\\
                     –\sin 20\degree & \cos 20\degree & 0 \\\
                     0 & 0 & 1 \end{bmatrix} .
-    
     \begin{bmatrix} 1 & 0 & 0 \\\
                     0 & 1 & 0 \\\
                     C_x & C_y & 1 \end{bmatrix}
