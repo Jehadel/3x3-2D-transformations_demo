@@ -146,6 +146,6 @@ $$ T1 . R . T2 = \\
                 C_x(1-\cos 20\degree) + C_y \sin 20\degree & C_y(1-\cos 20\degree) - C_x \sin 20\degree & 1 \end{bmatrix}
 $$
 
-But it’s not really important when we design a transformation script.
+But it’s not really necessary to calculate a combined matrix when we design a transformation script.
 
 We can apply the same logical to all transformations.
