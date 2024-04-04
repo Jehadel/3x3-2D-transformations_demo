@@ -178,4 +178,5 @@ Give user the ability to move (translate) the figure
 
 ## Issues
 
+The .js version sims to have some issues detecting simultaneous key press.
 For simplicity, a lot of transformations parameters are hard coded, not very elegant.
