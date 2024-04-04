@@ -172,8 +172,8 @@ make js
 
 ## To do 
 
-Write the script !
+Give user the ability to move (translate) the figure
 
 ## Issues
 
-To simplify, lot of transformations parameters are hard coded, not very elegant.
+For simplicity, a lot of transformations parameters are hard coded, not very elegant.
