@@ -9,8 +9,8 @@ How could we uses matrices to perform translations ?
 
 To translate a point 10 units along the x axis and 8 units along the y axis, we can peform the arithmetics :
 
-$$ \displaylines{x_t = x + 10 \\ y_t = y + 8} 
-$$
+$$ x_t = x + 10 $$
+$$ y_t = y + 8 $$
 
 2x2 matrices can’t express such transformation :
 
