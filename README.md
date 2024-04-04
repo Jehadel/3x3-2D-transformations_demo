@@ -50,11 +50,9 @@ $$
 So, if we accept to add a third term equal to 1 at the coordinates (that will be ignored when drawing figures) we can perform translation with a 3x3 matrix :
 
 $$ \begin{bmatrix} x & y & 1 \end{bmatrix} . 
-
     \begin{bmatrix} 1 & 0 & 0 \\\ 
                 0 & 1 & 0 \\\ 
-                t_x & t_y & 1 \end{bmatrix} = 
-
+                t_x & t_y & 1 \end{bmatrix} =
     \begin{bmatrix} x + t_x & y + t_y & 1\end{bmatrix}
 $$
 
