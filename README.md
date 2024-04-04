@@ -148,4 +148,6 @@ $$
 
 But it’s not really necessary to calculate a combined matrix when we design a transformation script.
 
-We can apply the same logical to all transformations.
+We can apply the same logics to all transformations.
+
+See the source code comments for more details !
