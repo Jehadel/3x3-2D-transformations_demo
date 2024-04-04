@@ -7,13 +7,13 @@ As seen [here](https://github.com/Jehadel/2D_transformations_demo) we can use 2x
 
 How could we uses matrices to perform translations ?
 
-To translate a point 10 units along the x axis and 8 units along the y axis, we can peform the arithmetics :
+Point translation of 10 units along the x axis and 8 units along the y axis, we can just be expressed by :
 
 $$ x_t = x + 10 $$
 
 $$ y_t = y + 8 $$
 
-2x2 matrices can’t express such transformation :
+but 2x2 matrices can’t express such transformation :
 
 $$ \begin{bmatrix} x \\\ y \end{bmatrix} . 
     \begin{bmatrix} a & b \\\ 
@@ -25,7 +25,11 @@ $$
 
 Each term is either a multiple of x or a multiple of y. We can’t add a constant.
 
-But if we note that $$ x + 10 = x.1 + y.0 + 1.10 $$ we can write :
+But if we note that 
+
+$$ x + 10 = x.1 + y.0 + 1.10 $$ 
+
+we can write :
 
 
 $$ \begin{bmatrix}x & y & 1\end{bmatrix} . 
@@ -151,3 +155,23 @@ But it’s not really necessary to calculate a combined matrix when we design a 
 We can apply the same logics to all transformations.
 
 See the source code comments for more details !
+
+## How to
+
+To run the demo :
+
+```bash
+make run
+```
+
+Build .js executable for the web :
+
+```bash
+make js
+```
+
+## To do 
+
+Write the script !
+
+## Issues
