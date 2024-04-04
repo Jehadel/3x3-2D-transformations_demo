@@ -1,6 +1,8 @@
 # 3x3-2D-transformations_demo
 Shows 3x3 matrices use for simple 2D transformations (translation, rotation, scaling…)
 
+[You can try the demo online](https://jehadel.github.io/3x3-2D-transformations_demo/)
+
 ## The translation problem
 
 As seen [here](https://github.com/Jehadel/2D_transformations_demo) we can use 2x2 matrices to performs some 2D transformations (rotations, flips…) but this method has major drawbacks : we can’t perform translation, some transformations lead to unwanted translations, and the transformations are relative to the coordinates origin/axes.
