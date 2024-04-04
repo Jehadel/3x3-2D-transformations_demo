@@ -7,9 +7,9 @@ As seen [here](https://github.com/Jehadel/2D_transformations_demo) we can use 2x
 
 How could we uses matrices to perform translations ?
 
-To translate a point 10 units along the x axis and 8 units along the y axis, we can peform the arithmetic :
+To translate a point 10 units along the x axis and 8 units along the y axis, we can peform the arithmetics :
 
-$$ x_t = x + 10 \\
+$$ x_t = x + 10 \\\
     y_t = y + 8 
 $$
 
