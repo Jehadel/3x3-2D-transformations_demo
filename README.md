@@ -15,14 +15,13 @@ $$ x_t = x + 10 $$
 
 $$ y_t = y + 8 $$
 
-but 2x2 matrices can’t express such transformation by multiplication :
+but 2x2 matrices can’t express such transformation by multiplication (I will represent coordinates by a row vector, when using a column vector just transpose the matrices used) :
 
-$$ \begin{bmatrix} x \\\ y \end{bmatrix} . 
+$$ \begin{bmatrix} x & y \end{bmatrix} . 
     \begin{bmatrix} a & b \\\ 
     b & c\end{bmatrix} = 
-    \begin{bmatrix} x.a + 
-    y.b & x.c + 
-    y.d\end{bmatrix} 
+    \begin{bmatrix} x.a + y.b &
+    x.c + y.d\end{bmatrix} 
 $$
 
 Each term is either a multiple of x or a multiple of y. We can’t add a constant.
@@ -38,24 +37,24 @@ we can write :
 
 $$ \begin{bmatrix}x & y & 1\end{bmatrix} . 
     \begin{bmatrix} 1 \\\ 0 \\\ 10 \end{bmatrix} = 
-    x + 10 
+    \begin{bmatrix} x + 10 \end{bmatrix} 
 $$
 
 for y :
 
 $$ \begin{bmatrix}x & y & 1\end{bmatrix} . 
     \begin{bmatrix} 0 \\\ 1 \\\ 8 \end{bmatrix} = 
-    y + 8 
+    \begin{bmatrix} y + 8 \end{bmatrix}
 $$
 
 and finally :
 
 $$ \begin{bmatrix}x & y & 1\end{bmatrix} . 
     \begin{bmatrix} 0 \\\ 0 \\\ 1 \end{bmatrix} = 
-    1 
+    \begin{bmatrix} 1 \end{bmatrix}
 $$
 
-So, if we accept to add a third term equal to 1 at the coordinates (that will be ignored when drawing figures) we can perform translation with a 3x3 matrix :
+So, if we accept to add a third term equal to 1 at the coordinates (that will be ignored when drawing figures) we can perform translation with a 3x3 matrix multiplication :
 
 $$ \begin{bmatrix} x & y & 1 \end{bmatrix} . 
     \begin{bmatrix} 1 & 0 & 0 \\\ 
@@ -82,6 +81,8 @@ $$ \begin{bmatrix} \cos \theta & \sin \theta & 0 \\\
                    0 & 0 & 1 \end{bmatrix} 
 $$
 
+*Note : to obtain an anti-clockwise rotation, we could also just use -θ with the clockwise rotation matrix*
+
 ### Horizontal flip
 
 $$ \begin{bmatrix} -1 & 0 & 0 \\\
@@ -103,14 +104,14 @@ $$ \begin{bmatrix} S_x & 0 & 0 \\\
                    0 & 0 & 1 \end{bmatrix} 
 $$
 
-### x-axis shearing
+### x-axis shearing/tearing
 
 $$ \begin{bmatrix} 1 & 0 & 0 \\\
                    S_x & 1 & 0 \\\
                    0 & 0 & 1 \end{bmatrix} 
 $$
 
-### y-axis shearing
+### y-axis shearing/tearing
 
 $$ \begin{bmatrix} 1 & S_y & 0 \\\
                    0 & 1 & 0 \\\
@@ -174,9 +175,11 @@ make js
 
 ## To do 
 
-Give user the ability to move (translate) the figure
+* Give user the ability to move (translate) only the figure
+* Explicit the chaining of transformation/multiplication. Why not record all transformations in a string given by the user, for exemple 'rmtsr' -> rotate / translate (move) / shear (tear) / scale / rotate) and show the resulting transformation matrix obtained by multiplications of primitives/transformation matrix ?
 
 ## Issues
 
-The .js version seems to have some issues detecting simultaneous key press.
-For simplicity, a lot of transformations parameters are hard coded, not very elegant.
+* The .js version seems to have some issues detecting simultaneous key press.
+
+* For simplicity, a lot of transformations parameters are hard coded, not very elegant.
