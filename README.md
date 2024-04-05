@@ -15,7 +15,7 @@ $$ x_t = x + 10 $$
 
 $$ y_t = y + 8 $$
 
-but 2x2 matrices can’t express such transformation :
+but 2x2 matrices can’t express such transformation by multiplication :
 
 $$ \begin{bmatrix} x \\\ y \end{bmatrix} . 
     \begin{bmatrix} a & b \\\ 
@@ -27,7 +27,9 @@ $$
 
 Each term is either a multiple of x or a multiple of y. We can’t add a constant.
 
-But if we note that 
+*Note : Of course, this operation is trivial if we add two 2x1 matrices, but the point here is to limit to product operation only, because we then could chain transformations by chaining multiplications.*  
+
+However, if we note that 
 
 $$ x + 10 = x.1 + y.0 + 1.10 $$ 
 
@@ -101,14 +103,14 @@ $$ \begin{bmatrix} S_x & 0 & 0 \\\
                    0 & 0 & 1 \end{bmatrix} 
 $$
 
-### x-axis « bending »
+### x-axis shearing
 
 $$ \begin{bmatrix} 1 & 0 & 0 \\\
                    S_x & 1 & 0 \\\
                    0 & 0 & 1 \end{bmatrix} 
 $$
 
-### y-axis « bending »
+### y-axis shearing
 
 $$ \begin{bmatrix} 1 & S_y & 0 \\\
                    0 & 1 & 0 \\\
@@ -144,15 +146,13 @@ $$ \begin{bmatrix} x & y & 1 \end{bmatrix} . T1 . R . T2 = \\
                     C_x & C_y & 1 \end{bmatrix}
 $$
 
-We can of course multiply the transformations matrices together to obtain a combined transformation matrix. Just be aware that matrix product is non-commutative : the order is important.
+We can of course multiply the transformations matrices together to obtain a combined transformation matrix, using the associative property of matrix product. Just be aware that matrix product however is non-commutative : the order is important.
 
 $$ T1 . R . T2 = \\
 \begin{bmatrix} \cos 20\degree & \sin 20\degree & 0 \\\
                 -\sin 20\degree & \cos 20\degree & 0 \\\
                 C_x(1-\cos 20\degree) + C_y \sin 20\degree & C_y(1-\cos 20\degree) - C_x \sin 20\degree & 1 \end{bmatrix}
 $$
-
-But it’s not really necessary to calculate a combined matrix when we design a transformation script.
 
 We can apply the same logics to all transformations.
 
