@@ -257,6 +257,9 @@ function love.update(dt)
   if auth == true then
 
     for i, point in ipairs(pointsLst) do
+      -- Chain transformations with translations to center the transformation
+      -- on a (central predefined vertex of the figure, see translation functions)
+      -- we could have chain the matrices product (tries it !)
       point = transf.translate_to_origin(point)
       point = transf[transformation](point)
       pointsLst[i] = transf.translate_from_origin(point)
