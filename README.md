@@ -63,6 +63,14 @@ $$ \begin{bmatrix} x & y & 1 \end{bmatrix} .
     \begin{bmatrix} x + t_x & y + t_y & 1\end{bmatrix}
 $$
 
+2D coordinates with such a third term are called *homogenous coordinates*, with a condition on the third term : 
+
+$$
+\begin{bmatrix} h.x & h.y & h \end{bmatrix}
+$$
+
+h=1 is often a convenient choice in 2D (other values can be better choices in 3D)
+
 ## 3x3 matrices for other transformations
 
 Following the same process, we can build 3x3 matrices for the transformations seen before :
