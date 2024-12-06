@@ -18,8 +18,8 @@ $$ y_t = y + 8 $$
 but 2x2 matrices can’t express such transformation by multiplication (I will represent coordinates by a row vector, when using a column vector just transpose the matrices used) :
 
 $$ \begin{bmatrix} x & y \end{bmatrix} . 
-    \begin{bmatrix} a & b \\\ 
-    b & c\end{bmatrix} = 
+    \begin{bmatrix} a & c \\\ 
+    b & d\end{bmatrix} = 
     \begin{bmatrix} x.a + y.b &
     x.c + y.d\end{bmatrix} 
 $$
