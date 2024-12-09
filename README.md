@@ -138,7 +138,13 @@ this 3 steps process is correct for any chosen point, here the bottom left verte
 
 ![Second translation exemple](./img/Transformation2.png)
 
-How do we combine those 3 transformations ? By successively applying the corresponding transformation matrices (translation consist to bring the point C - center of the rotation - of coordinates $$\begin{bmatrix} C_x & C_y \end{bmatrix} $$  to the origin $$ \begin{bmatrix} 0 & 0 \end{bmatrix} $$
+How do we combine those 3 transformations ? By successively applying the corresponding transformation matrices (translation consist to bring the point C - center of the rotation - of coordinates 
+
+$$\begin{bmatrix} C_x & C_y \end{bmatrix} $$  
+
+to the origin 
+
+$$ \begin{bmatrix} 0 & 0 \end{bmatrix} $$
 
 Perform the rotation and then translate back the figure to C. It means that C<sub>x</sub> and C<sub>y</sub> are not only the coordinates of C, but also the parameters of the translation.
 
